@@ -1,0 +1,17 @@
+mixin LeftSideMenu()
+    .offcanvas.offcanvas-start.show.overflow-hidden#offcanvasScrolling(data-bs-scroll="true" data-bs-backdrop="false" tabindex="-1")&attributes(attributes)
+        .offcanvas-header.align-items-end
+            a.logo(href="#")
+            span.version v.01
+            button.btn-close.d-xl-none(type="button" data-bs-dismiss="offcanvas")
+        .offcanvas-body(data-scroll-index="offCanvasBody")
+            nav.nav.flex-column
+                a.nav-link.mb-18(href="#")
+                    i.icon.me-14.icon-dashboard
+                    span.me-auto Dashboard
+                - var navItems = ['Product', 'Customers', 'Income', 'Promote', 'Help']
+                each item in navItems
+                    a.nav-link.mb-18(href="#" class={active: item === 'Customers'})
+                        i.icon.me-14(class="icon-" + item.toLowerCase())
+                        span= item
+                        i.icon.icon-chevron-right.ms-auto

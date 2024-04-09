@@ -1,0 +1,11 @@
+extends ../templates/layout
+include ../organisms/left-side-menu
+include ../organisms/all-customers
+
+block main
+	+LeftSideMenu()
+	main
+		.d-flex
+			i.bi.bi-list.d-xl-none.mb-51(data-bs-toggle="offcanvas" data-bs-target="#offcanvasScrolling")
+			h1.mb-51 Hello Evano 👋🏼,
+		+AllCustomers()

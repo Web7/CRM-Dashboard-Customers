@@ -1,0 +1,47 @@
+mixin AllCustomers()
+    .rounded.bg-white.pt-30.px-36.pb-41
+        .d-flex.flex-column.flex-md-row.align-items-start
+            div
+                h2.mb-7 All Customers
+                p.mb-40.text-success Active Members
+            .ms-md-auto
+                .input-group.flex-nowrap
+                    .input-group-text
+                        i.icon.icon-search
+                    input.form-control(placeholder="Search")
+        .table-responsive
+            table.table.mb-29
+                thead
+                    tr
+                        -var ths = ['Customer Name', 'Company', 'Phone Number', 'Email', 'Country', 'Status']
+                        each th in ths
+                            th= th
+                tbody
+                    -var tbodys = [['Jane Cooper', 'Microsoft', '(225) 555-0118', 'jane@microsoft.com', 'United States', 'Active'],['Floyd Miles', 'Yahoo', '(205) 555-0100', 'floyd@yahoo.com', 'Kiribati', 'Inactive']]
+                    each tds in tbodys
+                        tr
+                        -var tdss = ['Floyd Miles', 'Yahoo', '(205) 555-0100', 'floyd@yahoo.com', 'Kiribati', 'Inactive']
+                        each td in tds
+                            if td === 'Active' || td === 'Inactive'
+                                td
+                                    span.badge(class={'text-bg-inactive': td === 'Inactive', 'text-bg-active': td === 'Active'})= td
+                            else
+                                td= td
+        .d-flex.flex-column.flex-md-row.align-items-center
+            span.text-light.my-14.my-md-0 Showing data 1 to 8 of  256K entries
+            nav.ms-md-auto
+                ul.pagination.mb-0
+                    li.page-item
+                        a.page-link(href="#") <
+                    li.page-item.active
+                        a.page-link 1
+                    li.page-item
+                        a.page-link(href="#") 2
+                    li.page-item
+                        a.page-link(href="#") 3
+                    li.page-item
+                        a.page-link(href="#") ...
+                    li.page-item
+                        a.page-link(href="#") 40
+                    li.page-item
+                        a.page-link(href="#") >
