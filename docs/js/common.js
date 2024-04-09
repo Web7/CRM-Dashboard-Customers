@@ -19,11 +19,10 @@
 
 		if ($dataTarget.exists()) {
 			if (outerWidth >= 1200) {
-				$dataTarget.addClass('show').attr('data-bs-backdrop', 'true');
-			} else {
-				$dataTarget.removeClass('show').attr('data-bs-backdrop', 'false');
+				if (!$dataTarget.hasClass('show')) {
+					$milOffCanvasBtn.click();
+				}
 			}
-			// $body.removeClass('off-canvas-backdrop').css('overflow', 'auto');
 		}
 	};
 
