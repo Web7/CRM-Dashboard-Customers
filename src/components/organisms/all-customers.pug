@@ -17,10 +17,10 @@ mixin AllCustomers()
                         each th in ths
                             th= th
                 tbody
-                    -var tbodys = [['Jane Cooper', 'Microsoft', '(225) 555-0118', 'jane@microsoft.com', 'United States', 'Active'],['Floyd Miles', 'Yahoo', '(205) 555-0100', 'floyd@yahoo.com', 'Kiribati', 'Inactive']]
+                    -var tbodys = [['Jane Cooper', 'Microsoft', '(225) 555-0118', 'jane@microsoft.com', 'United States', 'Active'],['Floyd Miles', 'Yahoo', '(205) 555-0100', 'floyd@yahoo.com', 'Kiribati', 'Inactive'], ['Ronald Richards', 'Adobe', '(302) 555-0107', 'ronald@adobe.com', 'Israel', 'Inactive'],['Marvin McKinney', 'Tesla', '(252) 555-0126', 'marvin@tesla.com', 'Iran', 'Active'],['Jerome Bell', 'Google', '(629) 555-0129', 'jerome@google.com', 'Réunion', 'Active'],['Kathryn Murphy', 'Microsoft', '(406) 555-0120', 'kathryn@microsoft.com', 'Curaçao', 'Active']]
                     each tds in tbodys
                         tr
-                        -var tdss = ['Floyd Miles', 'Yahoo', '(205) 555-0100', 'floyd@yahoo.com', 'Kiribati', 'Inactive']
+                        -var tdss = ['Kathryn Murphy', 'Microsoft', '(406) 555-0120', 'kathryn@microsoft.com', 'Curaçao', 'Active']
                         each td in tds
                             if td === 'Active' || td === 'Inactive'
                                 td

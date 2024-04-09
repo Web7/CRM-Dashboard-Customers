@@ -4,7 +4,7 @@ mixin LeftSideMenu()
             a.logo(href="#")
             span.version v.01
             button.btn-close.d-xl-none(type="button" data-bs-dismiss="offcanvas")
-        .offcanvas-body(data-scroll-index="offCanvasBody")
+        .offcanvas-body.h-100.flex-column.d-flex(data-scroll-index="offCanvasBody")
             nav.nav.flex-column
                 a.nav-link.mb-18(href="#")
                     i.icon.me-14.icon-dashboard
@@ -15,3 +15,9 @@ mixin LeftSideMenu()
                         i.icon.me-14(class="icon-" + item.toLowerCase())
                         span= item
                         i.icon.icon-chevron-right.ms-auto
+            .mt-auto
+                .d-flex
+                    img(src="images/avatar.png" alt="" title="")
+                    .ms-12
+                        .text-black.f-medium Evano
+                        .text-dark Project Manager
